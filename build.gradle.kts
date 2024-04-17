@@ -21,12 +21,15 @@ repositories {
 	mavenCentral()
 }
 
+val junitJupiterVersion = "5.9.1"
+
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
 }
 
 tasks.withType<Test> {
